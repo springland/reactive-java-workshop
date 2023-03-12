@@ -1,6 +1,8 @@
 package io.javabrains.reactiveworkshop;
 
 import java.io.IOException;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Exercise3 {
 
@@ -13,8 +15,11 @@ public class Exercise3 {
         // TODO: Write code here
 
 
-        System.out.println("Press a key to end");
-        System.in.read();
+        List<Integer> numberList = ReactiveSources.intNumbersFlux().toStream().collect(Collectors.toList());
+        System.out.println(numberList);
+
+        // System.out.println("Press a key to end");
+        // System.in.read();
     }
 
 }
