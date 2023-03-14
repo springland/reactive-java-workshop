@@ -1,6 +1,7 @@
 package io.javabrains.reactiveworkshop;
 
 import java.io.IOException;
+import java.time.Duration;
 
 public class Exercise6 {
 
@@ -20,6 +21,7 @@ public class Exercise6 {
         // TODO: Write code here
 
 
+        ReactiveSources.unresponsiveFlux().collectList().block(Duration.ofSeconds(5));
         System.out.println("Press a key to end");
         System.in.read();
     }
